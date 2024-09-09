@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Editor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="editor-container">
+        <h1 class="center-header">Text Editor</h1>
+        <div class="toolbar">
+            <button onclick="document.execCommand('copy')">Copy</button>
+            <button onclick="document.execCommand('cut')">Cut</button>
+            <button onclick="document.execCommand('selectAll')">Select All</button>
+            <button onclick="document.execCommand('insertUnorderedList')">Unordered List</button>
+            <button onclick="document.execCommand('insertOrderedList')">Ordered List</button>
+            
+            <button onclick="document.execCommand('undo')">Undo</button>
+            <button onclick="document.execCommand('redo')">Redo</button>
+
+            
+        <!-- Text Formatting: Bold, Italic -->
+        <select id="textFormat" onchange="changeTextFormat()">
+            <option value="">Select Format</option>
+            <option value="bold">Bold</option>
+            <option value="italic">Italic</option>
+            <option value="underline">Underline</option>
+        </select>
+
+            <select id="fontSize" onchange="changeFontSize()">
+                <option value="">Select Size</option>
+                <option value="5">Small</option>
+                <option value="15">Normal</option>
+                <option value="25">Large</option>
+                <option value="35">Extra Large</option>
+            </select>
+            <select id="fontStyle" onchange="changeFontStyle()">
+                <option value="">Select Font</option>
+                <option value="Arial">Arial</option>
+                <option value="Times New Roman">Times New Roman</option>
+                <option value="Courier New">Courier</option>
+                <option value="Georgia">Georgia</option>
+            </select>
+        </div>
+        <div contenteditable="true" id="editor" class="editor"></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

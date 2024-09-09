@@ -1,0 +1,30 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color:blanchedalmond;
+}
+
+h1 {
+    
+    text-align: center;
+    border-bottom: 2px solid #000000;
+}
+.editor-container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 5px;
+    border: 2px solid #000000;
+    border-radius: 10px;
+    background: fixed;
+    background-color:white;
+}
+
+.toolbar {
+    margin-bottom: 10px;
+}
+
+.editor {
+    border: 1px solid #000000;
+    min-height: 300px;
+    padding: 10px;
+    font-size: 16px;
+}
